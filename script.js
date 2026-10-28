@@ -7,7 +7,7 @@ function setTheme(theme) {
 }
 let savedTheme;
 try { savedTheme = localStorage.getItem('theme'); } catch { /* Storage may be disabled. */ }
-setTheme(savedTheme === 'dark' ? 'dark' : 'light');
+setTheme(savedTheme === 'light' ? 'light' : 'dark');
 themeToggle.addEventListener('click', () => {
     const theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
     setTheme(theme);
