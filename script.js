@@ -5,13 +5,10 @@ function setTheme(theme) {
     themeToggle.querySelector('i').className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
     themeToggle.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`);
 }
-let savedTheme;
-try { savedTheme = localStorage.getItem('theme'); } catch { /* Storage may be disabled. */ }
-setTheme(savedTheme === 'light' ? 'light' : 'dark');
+setTheme('dark');
 themeToggle.addEventListener('click', () => {
     const theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
     setTheme(theme);
-    try { localStorage.setItem('theme', theme); } catch { /* The theme still works for this visit. */ }
 });
 
 const menuToggle = document.getElementById('mobileMenuToggle');
