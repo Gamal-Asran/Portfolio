@@ -28,11 +28,11 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" style="background: none; border: none; font-size: 20px; color: var(--text-primary); cursor: pointer; transition: var(--transition);">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                 <i class="fas fa-moon"></i>
             </button>
 
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -44,37 +44,28 @@
             <div class="hero-content">
                 <div class="hero-badge">
                     <span class="status-dot"></span>
-                    <span>Available for Opportunities</span>
+                    <span>Based in Egypt · Open to opportunities</span>
                 </div>
-                <h1>Hi, I'm <span class="gradient-text">Gamal Asran</span></h1>
-                <p class="subtitle">Data Scientist & ML Engineer</p>
+                <h1>Gamal<br><span class="gradient-text">Asran.</span></h1>
+                <p class="subtitle"> AI / ML Engineer</p>
                 <p class="description">
                     Building applied AI projects with Python, from local RAG assistants and computer vision models to Docker-packaged inference APIs.
                 </p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">
-                        <span><i class="fas fa-rocket"></i> View My Work</span>
+                        <span><i class="fas fa-rocket"></i> Explore my work</span>
                     </a>
                     <a href="#contact" class="btn btn-secondary">
-                        <span><i class="fas fa-envelope"></i> Get In Touch</span>
+                        <span><i class="fas fa-envelope"></i> Get in touch</span>
                     </a>
                 </div>
 
             </div>
             <div class="hero-image">
                 <div class="profile-wrapper">
-                    <img src="me.png" alt="Gamal Asran Profile" class="profile-img">
-                    <div class="floating-elements">
-                        <div class="floating-icon" style="color: #0ea5e9;">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <div class="floating-icon" style="color: #8b5cf6;">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <div class="floating-icon" style="color: #10b981;">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                    </div>
+                    <img src="me.png" alt="Gamal Asran" class="profile-img" fetchpriority="high">
+                    <p class="portrait-caption"><span>Computer Science · E-JUST</span><span>Class of 2027</span></p>
+
                 </div>
             </div>
         </div>
@@ -83,8 +74,8 @@
     <!-- About Section -->
     <section id="about">
         <div class="section-header">
-            <span class="section-label">About Me</span>
-            <h2>My <span class="gradient-text">Story</span></h2>
+            <span class="section-label">01 / Background</span>
+            <h2>A little about me.</h2>
             <p>Computer Science student focused on applied machine learning, NLP, and reliable production systems</p>
         </div>
         <div class="about-content">
@@ -121,8 +112,8 @@
     <!-- Skills Section -->
     <section id="skills">
         <div class="section-header">
-            <span class="section-label">Technical Expertise</span>
-            <h2>Skills & <span class="gradient-text">Technologies</span></h2>
+            <span class="section-label">02 / Toolkit</span>
+            <h2>Tools of the trade.</h2>
             <p>Comprehensive toolkit across data science, machine learning, and software engineering</p>
         </div>
         <div class="skills-grid">
@@ -175,8 +166,8 @@
     <!-- Experience Section -->
     <section id="experience">
         <div class="section-header">
-            <span class="section-label">Career Journey</span>
-            <h2>Experience & <span class="gradient-text">Mentoring</span></h2>
+            <span class="section-label">03 / Experience</span>
+            <h2>Learning. Building. Teaching.</h2>
             <p>Building expertise through hands-on industry experience and mentorship</p>
         </div>
         <div class="timeline">
@@ -250,8 +241,8 @@
     <!-- Projects Section -->
     <section id="projects">
         <div class="section-header">
-            <span class="section-label">Portfolio</span>
-            <h2>Featured <span class="gradient-text">Projects</span></h2>
+            <span class="section-label">04 / Selected work</span>
+            <h2>Selected work.</h2>
             <p>Showcasing real-world applications of data science and machine learning</p>
         </div>
         <div class="project-filters">
@@ -263,7 +254,7 @@
         </div>
         <div class="projects-grid">
             <div class="project-card" data-category="ml rag">
-                <div class="project-image"><i class="fas fa-book-open"></i></div>
+                <div class="project-image"><span class="project-number">PROJECT 01</span><i class="fas fa-book-open"></i></div>
                 <div class="project-content">
                     <h3>NIST AI Risk Assistant</h3>
                     <div class="project-tech">
@@ -285,7 +276,7 @@
                 </div>
             </div>
             <div class="project-card" data-category="ml vision">
-                <div class="project-image"><i class="fas fa-crosshairs"></i></div>
+                <div class="project-image"><span class="project-number">PROJECT 02</span><i class="fas fa-crosshairs"></i></div>
                 <div class="project-content">
                     <h3>Mamba-Based Single-Object Tracking</h3>
                     <div class="project-tech">
@@ -306,7 +297,7 @@
                 </div>
             </div>
             <div class="project-card" data-category="ml nlp">
-                <div class="project-image"><i class="fas fa-comments"></i></div>
+                <div class="project-image"><span class="project-number">PROJECT 03</span><i class="fas fa-comments"></i></div>
                 <div class="project-content">
                     <h3>Tweet Sentiment API</h3>
                     <div class="project-tech">
@@ -326,7 +317,7 @@
                 </div>
             </div>
             <div class="project-card" data-category="ml">
-                <div class="project-image"><i class="fas fa-heartbeat"></i></div>
+                <div class="project-image"><span class="project-number">PROJECT 04</span><i class="fas fa-heartbeat"></i></div>
                 <div class="project-content">
                     <h3>Cardiac Risk Classification</h3>
                     <div class="project-tech">
@@ -346,8 +337,8 @@
     <!-- Contact Section -->
     <section id="contact">
         <div class="section-header">
-            <span class="section-label">Get In Touch</span>
-            <h2>Let's <span class="gradient-text">Connect</span></h2>
+            <span class="section-label">05 / Contact</span>
+            <h2>Let’s make something useful.</h2>
             <p>Open to new opportunities, collaborations, and exciting data science projects</p>
         </div>
         <div class="contact-container">
@@ -406,27 +397,11 @@
                     </div>
                 </div>
             </div>
-            <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required placeholder="John Doe">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required placeholder="john@example.com">
-                </div>
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" required placeholder="Project Inquiry">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required placeholder="Tell me about your project or opportunity..."></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary form-submit">
-                    <span><i class="fas fa-paper-plane"></i> Send Message</span>
-                </button>
-            </form>
+            <div class="contact-note">
+                <h3>Have a project in mind?</h3>
+                <p>I’m interested in applied AI projects, internship opportunities, and thoughtful collaborations. Tell me what you’re working on.</p>
+                <a class="btn btn-primary" href="mailto:gamaalasran@gmail.com"><span>Write me an email ↗</span></a>
+            </div>
         </div>
     </section>
 
@@ -446,25 +421,18 @@
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
             </div>
-            <div class="footer-section">
-                <h3>Services</h3>
-                <a href="#">Machine Learning Solutions</a>
-                <a href="#">Data Analysis & Insights</a>
-                <a href="#">NLP & Text Analytics</a>
-                <a href="#">ML Model Deployment</a>
-                <a href="#">Data Pipeline Development</a>
-            </div>
+
             <div class="footer-section">
                 <h3>Resources</h3>
                 <a href="https://github.com/Gamal-Asran" target="_blank">GitHub Projects</a>
                 <a href="https://linkedin.com/in/gamal-asran" target="_blank">LinkedIn Profile</a>
                 <a href="https://www.upwork.com/freelancers/~01e0e2a4d2b234f352" target="_blank">Hire on Upwork</a>
-                <a href="#contact">Download Resume</a>
+                <a href="CV.pdf" download>Download CV ↗</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Gamal Asran. All rights reserved.</p>
-            <p>Built with ❤️ using HTML, CSS & JavaScript</p>
+            <p>&copy; 2026 Gamal Asran. All rights reserved.</p>
+            <p>Gamal Asran /  AI & ML Engineer</p>
         </div>
     </footer>
 
