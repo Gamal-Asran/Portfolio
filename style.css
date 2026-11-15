@@ -70,7 +70,6 @@ p, li, a { overflow-wrap: break-word; }
 .portrait-caption { display: flex; justify-content: space-between; gap: 16px; font-size: 10px; text-transform: uppercase; letter-spacing: .1em; padding-top: 16px; color: var(--muted); }
 .floating-elements { display: none; }
 .section-header { margin-bottom: clamp(28px, 5vw, 52px); max-width: 750px; }
-.section-label { display: block; font: 11px ui-monospace, monospace; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; }
 .section-header p { color: var(--muted); margin-top: 18px; max-width: 55ch; }
 .about-content { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: clamp(24px, 6vw, 80px); }
 .about-text p { margin-bottom: 20px; color: var(--muted); }

@@ -1,0 +1,24 @@
+{
+  "hook": {
+    "enabled": true,
+    "limits": {
+      "maxFindings": 5,
+      "maxChars": 8000
+    }
+  },
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-15T16:08:35.256Z",
+        "reason": "Agent verified in Chromium at 320, 390 and 1280 px: section insets are 60–102.4 px, timeline insets are 28 px, and project card insets are 22–36 px. The static HTML scan misreads those CSS insets."
+      }
+    ]
+  }
+}
