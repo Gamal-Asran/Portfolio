@@ -7,6 +7,15 @@
     <meta name="keywords" content="Data Science, Machine Learning, Python, SQL, TensorFlow, NLP, Portfolio, Gamal Asran">
     <meta name="author" content="Gamal Asran">
     <title>Gamal Asran | Data Scientist & ML Engineer</title>
+    <script>
+        try {
+            if (localStorage.getItem('portfolio-theme') === 'light') {
+                document.documentElement.dataset.theme = 'light';
+            }
+        } catch {
+            // Keep the default theme when storage is unavailable.
+        }
+    </script>
     <link rel="stylesheet" href="style.css">
 
     
@@ -15,10 +24,12 @@
     
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#home" class="logo">GA</a>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button" aria-expanded="false" aria-controls="navLinks">Menu</button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -28,29 +39,24 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
-            <button class="theme-toggle" id="themeToggle" aria-label="Switch to light theme">
-                <i class="fas fa-sun"></i>
-            </button>
-
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
-                <i class="fas fa-bars"></i>
-            </button>
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme">Light</button>
         </div>
     </nav>
 
+    <main id="main-content" tabindex="-1">
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero" id="home" tabindex="-1">
         <div class="hero-container">
             <div class="hero-content">
-                <div class="hero-badge">
-                    <span class="status-dot"></span>
-                    <span>Based in Egypt · Open to opportunities</span>
-                </div>
                 <h1>Gamal<br><span class="gradient-text">Asran.</span></h1>
                 <p class="subtitle"> AI / ML Engineer</p>
                 <p class="description">
                     Building applied AI projects with Python, from local RAG assistants and computer vision models to Docker-packaged inference APIs.
                 </p>
+                <div class="hero-badge">
+                    <span class="status-dot"></span>
+                    <span>Based in Egypt · Open to opportunities</span>
+                </div>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">
                         <span><i class="fas fa-rocket"></i> Explore my work</span>
@@ -63,7 +69,7 @@
             </div>
             <div class="hero-image">
                 <div class="profile-wrapper">
-                    <img src="me.png" alt="Gamal Asran" class="profile-img" fetchpriority="high">
+                    <img src="me.webp" width="462" height="418" alt="Gamal Asran" class="profile-img" fetchpriority="high">
                     <p class="portrait-caption"><span>Computer Science · E-JUST</span><span>Class of 2027</span></p>
 
                 </div>
@@ -72,7 +78,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about">
+    <section id="about" tabindex="-1">
         <div class="section-header">
             <h2>A little about me.</h2>
             <p>Computer Science student focused on applied machine learning, NLP, and reliable production systems</p>
@@ -109,7 +115,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills">
+    <section id="skills" tabindex="-1">
         <div class="section-header">
             <h2>Tools of the trade.</h2>
             <p>Comprehensive toolkit across data science, machine learning, and software engineering</p>
@@ -162,7 +168,7 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience">
+    <section id="experience" tabindex="-1">
         <div class="section-header">
             <h2>Learning. Building. Teaching.</h2>
             <p>Building expertise through hands-on industry experience and mentorship</p>
@@ -236,7 +242,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" tabindex="-1">
         <div class="section-header">
             <h2>Selected work.</h2>
             <p>Showcasing real-world applications of data science and machine learning</p>
@@ -331,7 +337,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" tabindex="-1">
         <div class="section-header">
             <h2>Let’s make something useful.</h2>
             <p>Open to new opportunities, collaborations, and exciting data science projects</p>
@@ -400,6 +406,8 @@
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
     <footer>
         <div class="footer-content">
@@ -433,7 +441,6 @@
 
     <!-- Back to Top Button -->
     <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
     </a>
 
    <script src="script.js"></script>

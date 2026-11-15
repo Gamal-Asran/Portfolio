@@ -2,13 +2,18 @@ const root = document.documentElement;
 const themeToggle = document.getElementById('themeToggle');
 function setTheme(theme) {
     root.dataset.theme = theme;
-    themeToggle.querySelector('i').className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    themeToggle.textContent = theme === 'dark' ? 'Light' : 'Dark';
     themeToggle.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`);
 }
-setTheme('dark');
+setTheme(root.dataset.theme);
 themeToggle.addEventListener('click', () => {
     const theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
     setTheme(theme);
+    try {
+        localStorage.setItem('portfolio-theme', theme);
+    } catch {
+        // The theme still works for this visit.
+    }
 });
 
 const menuToggle = document.getElementById('mobileMenuToggle');
@@ -16,8 +21,7 @@ const navLinks = document.getElementById('navLinks');
 function setMenu(open) {
     navLinks.classList.toggle('active', open);
     menuToggle.setAttribute('aria-expanded', String(open));
-    menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-    menuToggle.querySelector('i').className = open ? 'fas fa-times' : 'fas fa-bars';
+    menuToggle.textContent = open ? 'Close' : 'Menu';
 }
 menuToggle.addEventListener('click', () => setMenu(!navLinks.classList.contains('active')));
 navLinks.addEventListener('click', event => { if (event.target.closest('a')) setMenu(false); });

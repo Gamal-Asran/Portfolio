@@ -1,0 +1,10 @@
+# Local tools and credentials
+/.agents/
+/.aws/
+/.codex/
+/.notebook/
+
+# Local Impeccable state and reports
+/.impeccable/config.local.json
+/.impeccable/hook.cache.json
+/.impeccable/audit/
